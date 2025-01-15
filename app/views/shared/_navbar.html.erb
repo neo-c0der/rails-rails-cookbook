@@ -5,10 +5,3 @@
     <%= link_to "new category", new_category_path %>
   </div>
 </div>
-
-<h1>Create a New Category</h1>
-
-<%= simple_form_for @category do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>

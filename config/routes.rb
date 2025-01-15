@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+  root to: "home#index"
+
   resources :categories, only: [:index, :show, :new, :create] do
     resources :bookmarks, only: [:new, :create]
   end
