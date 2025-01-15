@@ -21,10 +21,11 @@
 }
 
 
-.card-recipe > {
+.card-recipe {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
 }
 
 .card-recipe > img {
@@ -42,4 +43,18 @@
   display: flex;
   justify-content: space-between;
   padding: 16px;
+}
+
+
+.btn-delete {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  i {
+    color: gray;
+    &:hover {
+      color: red;
+    }
+  }
 }

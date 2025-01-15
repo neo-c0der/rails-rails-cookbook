@@ -1,7 +1,16 @@
-<h1>Add a Recipe</h1>
+<div class="navbar">
+  <%= image_tag 'logo.png' %>
+  <div>
+    <%= link_to 'Home', root_path %>
+    <%= link_to "new category", new_category_path %>
+  </div>
+</div>
 
-<%= simple_form_for [@category, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :recipe %>
-  <%= f.submit %>
-<% end %>
+<div class="form-new mt-5">
+  <h1>Add a Recipe</h1>
+  <%= simple_form_for [@category, @bookmark] do |f| %>
+    <%= f.association :recipe %>
+    <%= f.input :comment, placeholder: "Comment here..." %>
+    <%= f.submit class: "btn btn-info"%>
+  <% end %>
+</div>
